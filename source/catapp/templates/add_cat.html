@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .main-head{
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+        .container{
+            max-width: 1200px;
+            padding: 20px;
+            margin: 10px auto;
+        }
+        
+
+    </style>
+    <title>Add new cat</title>
+</head>
+<body>
+    <div class="container">
+        <h2 class="main-head">Привет! это симулятор кота</h2>
+        <h3 class="main-head">Введите имя кота:</h3>
+    
+        <form action="/cat_stats/" method="POST">
+            {% csrf_token %}
+            <input type="text" name="cat_name" required>
+            <input type="submit">
+        </form>
+    
+    </div>
+
+</body>
+</html>
